@@ -1,0 +1,110 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1e, #1a1a2e, #16213e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+/* Header */
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(90deg, #7f5af0, #00eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Choices */
+.choice {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(127, 90, 240, 0.2);
+  box-shadow: 0 12px 30px rgba(127, 90, 240, 0.4);
+  cursor: pointer;
+}
+
+.choice img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.choice:hover img {
+  transform: scale(1.1);
+}
+
+/* Choices Container */
+.choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* Scoreboard */
+.score-board {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 4rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+}
+
+#user-score,
+#comp-score {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6ec7, #00eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Message */
+.msg-container {
+  margin-top: 4rem;
+}
+
+#msg {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
